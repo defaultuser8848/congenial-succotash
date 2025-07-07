@@ -4,7 +4,7 @@ import pybind11
 # 定义扩展模块
 ext_modules = [
     Extension(
-        'example',  # 模块名称
+        'graph',  # 模块名称
         sources=['src/main.cpp'],  # 源文件
         include_dirs=[
             pybind11.get_include(),
@@ -12,12 +12,12 @@ ext_modules = [
             'include'
         ],
         language='c++',
-        extra_compile_args=['-std=c++11'],
+        extra_compile_args=['-std=c++20'],
     ),
 ]
 
 setup(
-    name='example',
+    name='graph',
     version='0.1',
     description='Pybind11 example',
     ext_modules=ext_modules,
